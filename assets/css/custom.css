@@ -467,3 +467,43 @@ main li a:hover {
   0%, 100% { transform: scale(1); }
   50%      { transform: scale(1.6); }
 }
+
+.contact .contact-form .form-control,
+.contact .contact-form .form-select {
+  margin: 0.33rem !important;
+}
+
+.contact .contact-form #result p {
+  margin-bottom: 0.25rem;
+}
+
+.contact .contact-form .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.star-rating input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.star-rating label {
+  font-size: 1.75rem;
+  color: #ccc;
+  cursor: pointer;
+  padding: 0 2px;
+  transition: color 0.2s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #f5b301;
+}

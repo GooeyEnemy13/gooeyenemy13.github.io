@@ -126,38 +126,72 @@
 
           <div class="col-lg-7">
             <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+              <h3>Susisiekite</h3>
+              <p>Susisiekite el. paštu, ir atsakysiu jums kaip galima greičiau.</p>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
+              <form id="contactForm" method="post" novalidate>
+                <div class="row gy-6">
 
                   <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                    <input type="text" name="vardas" class="form-control" placeholder="Jusu vardas" required="">
+                    <div class="text-danger small" id="err-vardas"></div>
                   </div>
 
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" name="pavarde" placeholder="Pavarde" required="">
+                    <div class="text-danger small" id="err-pavarde"></div>
                   </div>
 
                   <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                    <input type="email" class="form-control" name="email" placeholder="El. paštas" required="">
+                    <div class="text-danger small" id="err-email"></div>
                   </div>
 
                   <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                    <input type="text" class="form-control" name="titulas" placeholder="Titulas" required="">
+                    <div class="text-danger small" id="err-titulas"></div>
+                  </div>
+                  
+                  <div class="col-12">
+                    <input class="form-control" name="telefonas" placeholder="Telefono numeris" required="">
+                    <div class="text-danger small" id="err-telefonas"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <input class="form-control" name="adresas" placeholder="Adresas" required="">
+                    <div class="text-danger small" id="err-adresas"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="form-label">1. Pirmas klausimas</label>
+                    <div class="star-rating" data-name="q1"></div>
+                    <div class="text-danger small" id="err-q1"></div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">2. Antras klausimas</label>
+                    <div class="star-rating" data-name="q2"></div>
+                    <div class="text-danger small" id="err-q2"></div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label">3. Trečias klausimas</label>
+                    <div class="star-rating" data-name="q3"></div>
+                    <div class="text-danger small" id="err-q3"></div>
+                  </div>
+
+                  <div class="col-12">
+                    <textarea class="form-control" name="zinute" rows="4" placeholder="Message" required=""></textarea>
+                    <div class="text-danger small" id="err-zinute"></div>
                   </div>
 
                   <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
                     <button type="submit" class="btn">Send Message</button>
+                    <button type="button" class="btn" id="clearBtn">Išvalyti</button>
                   </div>
 
                 </div>
               </form>
+
+              <div id="result"></div>
 
             </div>
           </div>
@@ -213,6 +247,7 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
